@@ -262,7 +262,7 @@ writeDataTable <- function(
     names(x) <- colNames
   }
 
-  ref1 <- paste0(convert_to_excel_ref(cols = startCol, LETTERS = LETTERS), startRow)
+  ref1 <- paste0(convert_to_excel_ref(cols = startCol - 1, LETTERS = LETTERS), startRow)
   ref2 <- paste0(convert_to_excel_ref(cols = startCol + ncol(x) - 1, LETTERS = LETTERS), startRow + nrow(x))
   ref <- paste(ref1, ref2, sep = ":")
 
